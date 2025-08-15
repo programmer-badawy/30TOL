@@ -55,13 +55,13 @@ a:not(.cta):not(.btn):hover::after {
     width: 750px;
   }
 }
-/* Medium */
+/* Medium/ */
 @media (min-width: 992px) {
   .container {
     width: 970px;
   }
 }
-/* Large */
+/* Large/ */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
@@ -73,8 +73,7 @@ a:not(.cta):not(.btn):hover::after {
 header {
   width: 100%;
   background-color: #ffffff;
-  position: relative;
-
+  position: absolute;
 }
 header .container {
   height: 80px;
@@ -106,19 +105,18 @@ header .container nav a {
 a.cta {
 }
 
-header .container i{
+header .container i {
   display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
-
 }
-header  .menu{
+header .menu {
   width: 300px;
   height: 0px;
   background-color: #ffffff;
-  border-radius:5px;
+  border-radius: 5px;
   position: absolute;
   top: 80px;
   right: 0;
@@ -129,18 +127,16 @@ header  .menu{
   align-items: center;
   z-index: 999;
   overflow: hidden;
-  transition: .5s;
+  transition: 0.5s;
   opacity: 0;
 }
-header  .menu.show{
-
+header .menu.show {
   height: 400px;
   border: 1px solid #00d1ff;
   opacity: 1;
 }
 
-
-header  .menu a{
+header .menu a {
   width: 100%;
   height: 100%;
   color: rgb(0, 0, 0);
@@ -149,21 +145,20 @@ header  .menu a{
   font-size: 20px;
   font-weight: 500;
   padding: 30px 20px 0px 20px;
-text-transform: uppercase;
+  text-transform: uppercase;
 }
-header  .menu a:hover{
+header .menu a:hover {
   color: #00d1ff;
 }
 @media (max-width: 991px) {
   header .container nav {
-  display: none;
+    display: none;
   }
   header .container i {
     display: block;
     cursor: pointer;
     margin-right: 20px;
   }
-
 }
 /* e header */
 /* s main */
@@ -172,7 +167,8 @@ main {
 }
 main .container {
   /* margin: 0 auto; */
-  height: calc(100vh - 80px);
+  /* height: calc(100vh - 80px); */
+  height: calc(100vh);
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -190,8 +186,17 @@ main .container .r-circle {
   position: relative;
   align-self: flex-end;
   margin-bottom: 50px;
+  /* display: none; */
 }
-
+@media (max-width: 991px) {
+  main .container {
+  justify-content: center;
+  }
+  main .container .l-circle,
+  main .container .r-circle {
+    display: none;
+  }
+}
 main .container .l-circle img,
 main .container .r-circle img {
   position: absolute;
@@ -219,7 +224,7 @@ main .container .m-circle {
 
 main .container .m-circle h2 {
   font-weight: 600;
-  font-size: 96px;
+  font-size: 90px;
   line-height: 100px;
   letter-spacing: 2%;
   text-align: center;
@@ -247,8 +252,21 @@ main .container .m-circle p {
     font-size: 20px;
   }
 }
+  @media (max-width: 787px) {
+    main .container .m-circle {
+      width: 300px;
+      height: 300px;
+      gap: 20px;
+    }
+    main .container .m-circle h2{
+      font-size: 33px;
+      line-height: 35px;
+    }
+    main .container .m-circle .cta {
+      padding: 12px 26px;
+    }
+    }
 main .container .m-circle .cta {
-
 }
 
 main .container .r-circle {
@@ -496,7 +514,7 @@ main .container .r-circle {
 .faq .container .content {
   width: 100%;
   height: 100%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   counter-reset: list-counter;
   display: flex;
   flex-direction: column;
@@ -508,10 +526,10 @@ main .container .r-circle {
   counter-reset: list-counter;
   position: relative;
 }
-.faq .container .content hr{
+.faq .container .content hr {
   border: none;
-  background-color: #F3F5F6;
-  z-index:999;
+  background-color: #f3f5f6;
+  z-index: 999;
   width: 100%;
   height: 5px;
 }
@@ -531,9 +549,7 @@ main .container .r-circle {
   font-size: 48px;
   line-height: 120%;
   letter-spacing: 0.25px;
-  
 }
-
 
 .faq .container .content .question .heading {
   display: flex;
@@ -547,14 +563,14 @@ main .container .r-circle {
   vertical-align: middle;
   color: #201f1f;
 }
-.faq .container .content .question p{
+.faq .container .content .question p {
   height: 0%;
   overflow: hidden;
   opacity: 0;
-  transition: .4s;
-  color: #3C3C43D9;
+  transition: 0.4s;
+  color: #3c3c43d9;
 }
-.faq .container .content .question .active{
+.faq .container .content .question .active {
   height: 100%;
   opacity: 1;
   margin-top: 20px;
@@ -566,7 +582,7 @@ main .container .r-circle {
 .faq .container .content .question .heading .custom-checkbox {
   width: 48px;
   height: 48px;
-  background-color: #F3F5F6;
+  background-color: #f3f5f6;
   border-radius: 50%;
   position: relative;
   cursor: pointer;
